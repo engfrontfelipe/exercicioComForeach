@@ -9,12 +9,9 @@ const alunos = [
 ];
 
 
-const alunosAprovados = [];
+const aprovados = alunos
+    .filter(aluno => aluno.nota > 8)
+    .map(aluno => aluno.nome)
 
-alunos.forEach(aluno => {
-    if(aluno.nota >= 8){
-        alunosAprovados.push(aluno.nome)
-    }
-})
 
-console.log(alunosAprovados);
+console.log(aprovados);
